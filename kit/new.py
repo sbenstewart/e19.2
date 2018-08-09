@@ -7,7 +7,6 @@ import pyautogui
 import sys
 import os
 import time
-import psutil
 
 # Environment:
 # OS    : Mac OS EL Capitan
@@ -64,6 +63,8 @@ def calculateFingers(res,drawing):  # -> finished bool, cnt: finger count
             return True, cnt
     return False, 0
 
+
+
 globcnt = 0;
 
 # Camera
@@ -76,6 +77,7 @@ os.system("open -a 'Microsoft PowerPoint.app' '%s'" % str(sys.argv[1]))
 time.sleep(5)
 count = 0
 flag = 0
+
 #alert(text='Just press the key q', title='How to Close', button='OK')
 pyautogui.click()
 pyautogui.hotkey('command','enter')
@@ -166,3 +168,5 @@ while camera.isOpened():
     elif k == ord('n') or count % 25 == 2:
         triggerSwitch = True
         print '!!!Trigger On!!!'
+    elif k == ord('q'):
+        sys.exit(0)
