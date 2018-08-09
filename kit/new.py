@@ -7,6 +7,7 @@ import pyautogui
 import sys
 import os
 import time
+import psutil
 
 # Environment:
 # OS    : Mac OS EL Capitan
@@ -165,4 +166,3 @@ while camera.isOpened():
     elif k == ord('n') or count % 25 == 2:
         triggerSwitch = True
         print '!!!Trigger On!!!'
-    
