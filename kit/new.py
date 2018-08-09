@@ -4,6 +4,9 @@ import copy
 import math
 from appscript import app
 import pyautogui
+import sys
+import os
+import time
 
 # Environment:
 # OS    : Mac OS EL Capitan
@@ -61,13 +64,16 @@ def calculateFingers(res,drawing):  # -> finished bool, cnt: finger count
     return False, 0
 
 globcnt = 0;
+
 # Camera
 camera = cv2.VideoCapture(0)
 camera.set(10,200)
 cv2.namedWindow('trackbar')
 cv2.createTrackbar('trh1', 'trackbar', threshold, 100, printThreshold)
-
-count = 0 
+print 'Argument List:', str(sys.argv[1])
+os.system("open -a 'Microsoft PowerPoint.app' '%s'" % str(sys.argv[1]))
+time.sleep(5)
+count = 0
 flag = 0
 #alert(text='Just press the key q', title='How to Close', button='OK')
 pyautogui.click()
@@ -133,7 +139,7 @@ while camera.isOpened():
                     print "Is the signal reliable?"
                     flag=1
                 globcnt=cnt
-                    
+
 
 
         #cv2.imshow('output', drawing)
@@ -159,5 +165,4 @@ while camera.isOpened():
     elif k == ord('n') or count % 25 == 2:
         triggerSwitch = True
         print '!!!Trigger On!!!'
-    elif k== ord('q'):
-        break
+    
