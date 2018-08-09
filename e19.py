@@ -1,9 +1,8 @@
 #!/bin/env python
+import os
+import sys
 
-./new.command $1 &
-python kit/new.py
+os.system("./new.command '%s' & python kit/new.py" % str(sys.argv[1]))
 
-os.system("new.command" % str(sys.argv[1]))
-os.system("python kit/new.py ")
 
 os.system("clear")
