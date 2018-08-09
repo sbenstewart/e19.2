@@ -72,8 +72,8 @@ camera = cv2.VideoCapture(0)
 camera.set(10,200)
 cv2.namedWindow('trackbar')
 cv2.createTrackbar('trh1', 'trackbar', threshold, 100, printThreshold)
-print 'Argument List:', str(sys.argv[1])
-os.system("open -a 'Microsoft PowerPoint.app' '%s'" % str(sys.argv[1]))
+#print 'Argument List:', str(sys.argv[1])
+#os.system("open -a 'Microsoft PowerPoint.app' '%s'" % str(sys.argv[1]))
 time.sleep(5)
 count = 0
 flag = 0

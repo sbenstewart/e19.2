@@ -1,5 +1,5 @@
 #!/bin/bash
-#open -a "Microsoft PowerPoint" $1
+open -a "Microsoft PowerPoint" $1
 number=$(ps aux | pgrep "Microsoft PowerPoint" | wc -l)
 while [ 1 ]
 do
