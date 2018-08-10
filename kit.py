@@ -2,7 +2,6 @@ import cv2
 import numpy as np
 import copy
 import math
-from appscript import app
 import pyautogui
 import sys
 import os
